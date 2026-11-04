@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScholarOS — Academic Dashboard</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="container" style="padding-top: 60px; max-width: 680px;">
+    <h1 style="font-family: 'Space Grotesk', monospace; font-size: 2rem; margin-bottom: 8px;">ScholarOS</h1>
+    <p style="color: #a1a1aa; margin-bottom: 32px;">Modular academic dashboard — GPA tracking, risk prediction, auto-generated study schedules.</p>
+
+    <div style="background: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 24px; margin-bottom: 24px;">
+      <h3 style="margin-bottom: 12px;">What It Does</h3>
+      <ul style="color: #a1a1aa; line-height: 1.8; list-style: none; padding: 0;">
+        <li>📊 <strong style="color: #fafafa;">GPA tracking</strong> — per course, per term, cumulative</li>
+        <li>⚠️ <strong style="color: #fafafa;">Risk prediction</strong> — flags courses trending toward failure</li>
+        <li>📅 <strong style="color: #fafafa;">Study schedules</strong> — auto-generated based on exam dates and difficulty</li>
+        <li>🔌 <strong style="color: #fafafa;">FastAPI REST API</strong> — full CRUD for all entities</li>
+        <li>🖥️ <strong style="color: #fafafa;">Tkinter desktop GUI</strong> — native Windows app</li>
+      </ul>
+    </div>
+
+    <div style="background: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 24px; margin-bottom: 24px;">
+      <h3 style="margin-bottom: 12px;">Tech Stack</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <span style="background: rgba(99,102,241,.12); color: #818cf8; padding: 4px 12px; border-radius: 999px; font-size: .8rem; font-family: 'Space Grotesk', monospace;">Python</span>
+        <span style="background: rgba(99,102,241,.12); color: #818cf8; padding: 4px 12px; border-radius: 999px; font-size: .8rem; font-family: 'Space Grotesk', monospace;">FastAPI</span>
+        <span style="background: rgba(99,102,241,.12); color: #818cf8; padding: 4px 12px; border-radius: 999px; font-size: .8rem; font-family: 'Space Grotesk', monospace;">SQLite</span>
+        <span style="background: rgba(99,102,241,.12); color: #818cf8; padding: 4px 12px; border-radius: 999px; font-size: .8rem; font-family: 'Space Grotesk', monospace;">Tkinter</span>
+        <span style="background: rgba(99,102,241,.12); color: #818cf8; padding: 4px 12px; border-radius: 999px; font-size: .8rem; font-family: 'Space Grotesk', monospace;">pytest</span>
+      </div>
+    </div>
+
+    <div style="background: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 24px; margin-bottom: 24px;">
+      <h3 style="margin-bottom: 12px;">How to Run</h3>
+      <pre style="background: #09090b; border: 1px solid #27272a; border-radius: 6px; padding: 12px; color: #e6edf3; font-size: .85rem; overflow-x: auto; margin: 0;"><code># Install
+pip install -e .
+
+# Run API server
+python -m scholaros.api.app
+
+# Run desktop GUI
+python -m scholaros.gui.dashboard</code></pre>
+    </div>
+
+    <div style="background: rgba(99,102,241,.08); border: 1px solid rgba(99,102,241,.2); border-radius: 8px; padding: 16px;">
+      <p style="color: #818cf8; font-size: .9rem; margin: 0;">
+        📝 <strong style="color: #fafafa;">1,180 LOC</strong> · 
+        ✅ <strong style="color: #fafafa;">33 tests passing</strong> · 
+        🔍 <strong style="color: #fafafa;">AI critic → reviewer → security judge pipeline</strong>
+      </p>
+    </div>
+
+    <p style="margin-top: 32px; color: #a1a1aa; font-size: .85rem;">
+      This is a Python application — the source code is in this repository. 
+      <a href="https://github.com/toxic-jpg/scholaros" target="_blank" rel="noopener" style="color: #6366f1;">View on GitHub →</a>
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PennyPinch — CLI Finance Tracker</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="container" style="padding-top: 60px; max-width: 680px;">
+    <h1 style="font-family: 'Space Grotesk', monospace; font-size: 2rem; margin-bottom: 8px;">PennyPinch</h1>
+    <p style="color: #a1a1aa; margin-bottom: 32px;">A zero-dependency CLI personal finance tracker. Log income and expenses, categorize spending, generate monthly reports — all backed by a single JSON file.</p>
+
+    <div style="background: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 24px; margin-bottom: 24px;">
+      <h3 style="margin-bottom: 12px;">What It Does</h3>
+      <ul style="color: #a1a1aa; line-height: 1.8; list-style: none; padding: 0;">
+        <li>💰 <strong style="color: #fafafa;">Log entries</strong> — income, expenses with category and notes</li>
+        <li>📊 <strong style="color: #fafafa;">Monthly reports</strong> — category-wise breakdown with totals</li>
+        <li>🔍 <strong style="color: #fafafa;">Filter</strong> — by category and date range</li>
+        <li>📁 <strong style="color: #fafafa;">Zero deps</strong> — pure stdlib Python + JSON persistence</li>
+        <li>🖥️ <strong style="color: #fafafa;">CLI-first</strong> — <code style="background: #09090b; padding: 1px 6px; border-radius: 4px; color: #818cf8;">pennypinch --help</code></li>
+      </ul>
+    </div>
+
+    <div style="background: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 24px; margin-bottom: 24px;">
+      <h3 style="margin-bottom: 12px;">Usage Examples</h3>
+      <pre style="background: #09090b; border: 1px solid #27272a; border-radius: 6px; padding: 12px; color: #e6edf3; font-size: .82rem; overflow-x: auto; margin: 0;"><code>pennypinch add expense 12.50 --category groceries --note "weekly shop"
+pennypinch add income 1000 --category salary
+pennypinch list --category groceries --from 2026-01-01
+pennypinch report</code></pre>
+    </div>
+
+    <div style="background: rgba(99,102,241,.08); border: 1px solid rgba(99,102,241,.2); border-radius: 8px; padding: 16px;">
+      <p style="color: #818cf8; font-size: .9rem; margin: 0;">
+        📦 <strong style="color: #fafafa;">Published</strong> on PyPI via GitHub repo. Install with <code style="background: #09090b; padding: 1px 6px; border-radius: 4px; color: #818cf8;">pip install pennypinch</code>
+      </p>
+    </div>
+
+    <p style="margin-top: 32px; color: #a1a1aa; font-size: .85rem;">
+      <a href="https://github.com/toxic-jpg/PennyPinch" target="_blank" rel="noopener" style="color: #6366f1;">View on GitHub →</a>
+    </p>
+  </div>
+</body>
+</html>
