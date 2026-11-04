@@ -1,0 +1,13 @@
+{
+  "date_columns": ["order_date", "signup_date"],
+  "numeric_columns": ["amount", "quantity", "price"],
+  "fill_missing": {
+    "quantity": "zero",
+    "amount": "zero"
+  },
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 587,
+  "smtp_user": "your_email@gmail.com",
+  "smtp_pass": "your_app_password",
+  "to_emails": ["client@example.com"]
+}

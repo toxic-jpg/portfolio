@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Lawrence Candelario — Software Developer & BSIT Student</title>
+  <meta name="description" content="Portfolio of Heart, a BSIT student and software developer building real applications in Java, Python, Web, and automation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Skip link for keyboard users -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- Navigation -->
+<nav class="nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">HLC</a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://github.com/toxic-jpg" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">GitHub</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Heart Lawrence Candelario &middot; Software Developer &middot; BSIT Student</p>
+    <h1>Building useful software,<br>one project at a time.</h1>
+    <p class="lede">
+      I build real, functional applications in Java, JavaFX, Python, SQL, and the web stack.
+      School projects, freelance gigs, automation tools, and more &mdash; I ship working code,
+      not just snippets.
+    </p>
+    <div class="cta-row">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+    <div class="stack-row" aria-label="Technologies">
+      <span>Java</span><span>JavaFX</span><span>Python</span><span>SQL</span>
+      <span>HTML/CSS/JS</span><span>WinForms</span><span>MySQL</span><span>Git</span>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Second-year BSIT student based in the Philippines. I learn by building &mdash; so my portfolio
+          is a collection of working applications, not just code samples. I'm comfortable end-to-end:
+          database schema, backend logic, UI, and deployment.
+        </p>
+        <p>
+          What I'm actively working toward: stronger software engineering fundamentals, real
+          shipped products (freelance and personal), and automation that saves time instead of
+          creating more work.
+        </p>
+      </div>
+      <div class="about-focus">
+        <h3>Focus Areas</h3>
+        <ul class="focus-list">
+          <li>Software engineering &amp; application architecture</li>
+          <li>Game development &amp; modding (Minecraft, RPGs)</li>
+          <li>AI tools, automation, and scripting</li>
+          <li>Cybersecurity basics &amp; secure coding practice</li>
+          <li>Data analytics with Python, pandas, SQL</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-sub">A selection of working applications I've built.</p>
+    <div class="card-grid">
+
+      <article class="card">
+        <div class="card-header">
+          <h3>ScholarOS</h3>
+          <span class="badge badge-featured">Featured</span>
+        </div>
+        <p>Modular academic dashboard with GPA tracking, risk prediction, and auto-generated study schedules. FastAPI REST API + Tkinter desktop GUI. Built with an AI critic &rarr; reviewer &rarr; security judge pipeline. 1,180 LOC, 33 tests passing.</p>
+        <div class="tags">Python &middot; FastAPI &middot; SQLite &middot; Tkinter &middot; pytest</div>
+        <a class="card-link" href="scholaros/" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          View Project
+        </a>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h3>BuddySplit</h3>
+          <span class="badge badge-featured">Featured</span>
+        </div>
+        <p>Web-based group expense tracker with authentication, settlement minimization, CSV export, and real-time updates via Socket.io. PostgreSQL backend, Vite + React frontend.</p>
+        <div class="tags">React &middot; Node &middot; Express &middot; PostgreSQL &middot; Socket.io</div>
+        <a class="card-link" href="BuddySplit/" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          View Project
+        </a>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h3>PennyPinch</h3>
+        </div>
+        <p>CLI personal finance tracker &mdash; log income and expenses, categorize spending, and generate monthly reports. Zero dependencies, pure stdlib Python with JSON persistence.</p>
+        <div class="tags">Python &middot; CLI &middot; argparse &middot; JSON</div>
+        <a class="card-link" href="pennypinch/" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          View Project
+        </a>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h3>CSV Data Cleaner</h3>
+        </div>
+        <p>Python tool that scrubs, validates, and transforms messy CSV/Excel files &mdash; missing values, inconsistent types, deduplication, date/number parsing, and email reports.</p>
+        <div class="tags">Python &middot; pandas &middot; openpyxl &middot; smtplib</div>
+        <a class="card-link" href="python-csv-cleaner_20261024_1555/" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          View Demo
+        </a>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h3>JS Bug-Fix Demo</h3>
+        </div>
+        <p>Interactive debugging playground showing real bug patterns, fixes, and test cases &mdash; demonstrates debugging skill visually in the browser.</p>
+        <div class="tags">JavaScript &middot; HTML &middot; CSS</div>
+        <a class="card-link" href="js-bug-fix-demo_20261024_1556/" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          View Demo
+        </a>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h3>CF7 &rarr; Google Sheets</h3>
+        </div>
+        <p>WordPress plugin that syncs Contact Form 7 submissions into Google Sheets via Apps Script &mdash; zero WP plugin dependencies, field mapping UI, handles checkboxes/uploads.</p>
+        <div class="tags">PHP &middot; WordPress &middot; Google API &middot; JavaScript</div>
+        <a class="card-link" href="wp-contact-form-7-google-sheets_20261024_1555/" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          View Project
+        </a>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h3>Shopify Section Builder</h3>
+        </div>
+        <p>Drag-and-drop Shopify theme section builder with live preview and JSON schema &mdash; demonstrates Liquid, HTML, CSS, and JS integration on Netlify.</p>
+        <div class="tags">HTML &middot; CSS &middot; JavaScript &middot; Shopify &middot; Liquid</div>
+        <a class="card-link" href="test_shopify_demo/" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          View Demo
+        </a>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h3>Freelance Business Site</h3>
+        </div>
+        <p>Flask + SQLite contact-form site delivered for a client &mdash; validated API endpoint, JSONL lead mirror, health check, and editable site config.</p>
+        <div class="tags">Python &middot; Flask &middot; SQLite &middot; REST</div>
+        <a class="card-link" href="https://github.com/toxic-jpg" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          View on GitHub
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="tags-wrap">
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">PHP</span>
+          <span class="tag">SQL</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">Liquid</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Frameworks &amp; Libraries</h3>
+        <div class="tags-wrap">
+          <span class="tag">JavaFX</span>
+          <span class="tag">Swing</span>
+          <span class="tag">WinForms</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Flask</span>
+          <span class="tag">React</span>
+          <span class="tag">Node/Express</span>
+          <span class="tag">Tailwind</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Tools &amp; Platforms</h3>
+        <div class="tags-wrap">
+          <span class="tag">MySQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">Git/GitHub</span>
+          <span class="tag">Docker</span>
+          <span class="tag">WordPress</span>
+          <span class="tag">Shopify</span>
+          <span class="tag">Netlify</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section section-alt">
+  <div class="container container-narrow">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-sub">
+      Open to software development roles, freelance projects, and internships.
+      I take on small fixed-price projects ($20&ndash;$300) &mdash; bug fixes, data tools, web features, and automation. Available for remote work.
+    </p>
+    <div class="contact-row">
+      <a class="btn btn-primary" href="mailto:heartlawrencecandelario@gmail.com">Email Me</a>
+      <a class="btn btn-ghost" href="https://github.com/toxic-jpg" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+    </div>
+    <p class="fineprint">Based in the Philippines (GMT+8) &middot; Available for remote work &middot; Open to internships and junior roles</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Heart &middot; Built with HTML, CSS &amp; JS</p>
+    <p class="footer-links">
+      <a href="https://github.com/toxic-jpg" target="_blank" rel="noopener">GitHub</a>
+      <span aria-hidden="true">&middot;</span>
+      <a href="#projects">Projects</a>
+      <span aria-hidden="true">&middot;</span>
+      <a href="#contact">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+</body>
+</html>

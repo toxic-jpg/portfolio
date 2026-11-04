@@ -1,0 +1,7 @@
+id,code,name,credits,term_id
+c001,CS101,Intro to Programming,3,t001
+c002,CS102,Data Structures,3,t001
+c003,MATH101,Calculus I,4,t001
+c004,CS201,Algorithms,3,t002
+c005,MATH102,Calculus II,4,t002
+c006,CS202,DB Systems,3,t002

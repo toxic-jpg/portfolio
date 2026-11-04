@@ -1,0 +1,40 @@
+:root {
+  --bg: #0b0f14; --panel: #111820; --card: #151d28;
+  --text: #e8edf2; --muted: #7a8a9a; --accent: #00d4aa;
+  --border: #233040; --input: #0e151d;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+.app { display: grid; grid-template-columns: 320px 1fr; gap: 0; height: 100vh; }
+.panel { background: var(--panel); border-right: 1px solid var(--border); padding: 1.5rem; overflow-y: auto; }
+.panel h2 { font-size: 1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--accent); }
+.hint { font-size: 0.75rem; color: var(--muted); margin-top: 1rem; }
+.preview { padding: 2rem; overflow-y: auto; background: radial-gradient(ellipse at top, #141d2a 0%, var(--bg) 70%); }
+.section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+.section h3 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 1rem; }
+.setting-group { margin-bottom: 1rem; }
+.setting-group label { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.35rem; }
+.setting-group input, .setting-group select, .setting-group textarea {
+  width: 100%; background: var(--input); border: 1px solid var(--border); color: var(--text);
+  padding: 0.5rem 0.75rem; border-radius: 6px; font-size: 0.85rem;
+}
+.setting-group input:focus, .setting-group select:focus { outline: none; border-color: var(--accent); }
+.setting-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.toggle { display: flex; align-items: center; gap: 0.5rem; }
+.toggle input { width: auto; }
+.announcement-bar { background: var(--accent); color: #000; padding: 0.5rem 1rem; text-align: center; font-weight: 500; }
+.announcement-bar.dismissible { cursor: pointer; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+.feature-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+.feature-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.feature-card h4 { font-size: 0.95rem; margin-bottom: 0.25rem; }
+.feature-card p { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; }
+.feature-card button { background: var(--accent); color: #000; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; cursor: pointer; }
+.testimonial-carousel { position: relative; }
+.testimonial-track { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; }
+.testimonial { flex: 0 0 300px; scroll-snap-align: start; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+.testimonial p { font-style: italic; font-size: 0.85rem; color: var(--muted); margin-bottom: 0.75rem; }
+.testimonial cite { font-size: 0.75rem; color: var(--accent); }
+.carousel-dots { display: flex; justify-content: center; gap: 0.4rem; margin-top: 0.75rem; }
+.carousel-dots button { width: 8px; height: 8px; border-radius: 50%; border: none; background: var(--border); cursor: pointer; }
+.carousel-dots button.active { background: var(--accent); }

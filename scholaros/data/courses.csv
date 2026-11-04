@@ -1,0 +1,7 @@
+id,code,name,credits,term_id,instructor
+c001,CS101,Intro to Programming,3,t001,Dr. Reyes
+c002,CS102,Data Structures,3,t001,Dr. Santos
+c003,MATH101,Calculus I,4,t001,Prof. Garcia
+c004,CS201,Algorithms,3,t002,Dr. Reyes
+c005,MATH102,Calculus II,4,t002,Prof. Garcia
+c006,CS202,DB Systems,3,t002,Dr. Santos

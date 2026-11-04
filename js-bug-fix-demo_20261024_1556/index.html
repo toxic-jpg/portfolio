@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Bug Fix Demo — Broken Layout Fixer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🐛 Bug Fix Demo</h1>
+      <p>Three common layout bugs — toggle to see the fix</p>
+    </header>
+    
+    <section class="bug-card">
+      <div class="bug-header">
+        <h2>Bug #1: Flexbox Gap + Overflow</h2>
+        <label class="toggle">
+          <input type="checkbox" id="fix1" checked>
+          <span class="slider"></span>
+          <span class="label">FIXED</span>
+        </label>
+      </div>
+      <div class="demo" id="demo1">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2 with longer content</div>
+        <div class="card">Card 3</div>
+      </div>
+      <details class="explanation">
+        <summary>What was broken?</summary>
+        <p><strong>Bug:</strong> `gap` on flex container + long content = overflow on mobile.</p>
+        <p><strong>Fix:</strong> `min-width: 0` on flex children + `overflow: hidden` on container.</p>
+      </details>
+    </section>
+
+    <section class="bug-card">
+      <div class="bug-header">
+        <h2>Bug #2: Absolute Center in Relative Parent</h2>
+        <label class="toggle">
+          <input type="checkbox" id="fix2" checked>
+          <span class="slider"></span>
+          <span class="label">FIXED</span>
+        </label>
+      </div>
+      <div class="demo" id="demo2">
+        <div class="parent">
+          <div class="child">Centered</div>
+        </div>
+      </div>
+      <details class="explanation">
+        <summary>What was broken?</summary>
+        <p><strong>Bug:</strong> `top: 50%; left: 50%` without `transform: translate(-50%, -50%)` centers the top-left corner, not the element.</p>
+        <p><strong>Fix:</strong> Add `transform: translate(-50%, -50%)`.</p>
+      </details>
+    </section>
+
+    <section class="bug-card">
+      <div class="bug-header">
+        <h2>Bug #3: z-index Stacking Context Trap</h2>
+        <label class="toggle">
+          <input type="checkbox" id="fix3" checked>
+          <span class="slider"></span>
+          <span class="label">FIXED</span>
+        </label>
+      </div>
+      <div class="demo" id="demo3">
+        <div class="modal-backdrop" id="backdrop"></div>
+        <div class="modal" id="modal">
+          <div class="modal-content">
+            <h3>Modal Dialog</h3>
+            <p>This should be ABOVE the backdrop.</p>
+            <button id="closeModal">Close</button>
+          </div>
+        </div>
+        <div class="sticky-header">Sticky Header (z-index: 100)</div>
+      </div>
+      <details class="explanation">
+        <summary>What was broken?</summary>
+        <p><strong>Bug:</strong> Modal inside a stacking context (parent with z-index) can't escape above sibling with higher z-index.</p>
+        <p><strong>Fix:</strong> Move modal to body (portal) OR remove z-index from parent creating the context.</p>
+      </details>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
