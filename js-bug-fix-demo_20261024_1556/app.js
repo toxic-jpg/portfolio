@@ -1,15 +1,31 @@
 // Bug Fix Demo - Interactive explanations
-document.querySelectorAll('.toggle input').forEach(cb => {
-  cb.addEventListener('change', () => {
-    // Force re-render by toggling a class on body
-    document.body.classList.toggle('force-repaint');
-    requestAnimationFrame(() => document.body.classList.toggle('force-repaint'));
-  });
+document.querySelectorAll('.bug-card').forEach(card => {
+  const checkbox = card.querySelector('.toggle input');
+  const demo = card.querySelector('.demo');
+  if (!checkbox || !demo) return;
+
+  const update = () => {
+    if (checkbox.checked) {
+      demo.classList.remove('broken');
+      demo.classList.add('fixed');
+    } else {
+      demo.classList.remove('fixed');
+      demo.classList.add('broken');
+    }
+  };
+
+  checkbox.addEventListener('change', update);
+  update(); // Initial state
 });
 
 // Modal close
-document.getElementById('closeModal')?.addEventListener('click', () => {
-  document.getElementById('fix3')?.click(); // Toggle off
-});
+const closeBtn = document.getElementById('closeModal');
+const fix3 = document.getElementById('fix3');
+if (closeBtn && fix3) {
+  closeBtn.addEventListener('click', () => {
+    fix3.checked = false;
+    fix3.dispatchEvent(new Event('change'));
+  });
+}
 
 console.log('Bug Fix Demo loaded. Toggle switches to see before/after.');
