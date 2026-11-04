@@ -11,7 +11,6 @@ INDEX_HTML = PORTFOLIO_DIR / "index.html"
 # Known project slugs already in the HTML
 KNOWN_SLUGS = {
     "python-csv-cleaner",
-    "js-bug-fix-demo",
     "wp-contact-form-7-google-sheets",
     "shopify-section-builder",
     "freelance-automation",

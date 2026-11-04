@@ -43,7 +43,6 @@ All demos are real, working subfolders in this repo:
 | BuddySplit | `BuddySplit/` |
 | PennyPinch | `pennypinch/` |
 | CSV Data Cleaner | `python-csv-cleaner_20261024_1555/` |
-| JS Bug-Fix Demo | `js-bug-fix-demo_20261024_1556/` |
 | CF7 → Google Sheets | `wp-contact-form-7-google-sheets_20261024_1555/` |
 | Shopify Section Builder | `test_shopify_demo/` |
 
