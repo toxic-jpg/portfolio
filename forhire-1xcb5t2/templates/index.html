@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.business_name }} — {{ site.tagline | trim }}</title>
+  <meta name="description" content="{{ site.about }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">{{ site.business_name }}</a>
+      <nav aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <h1>{{ site.tagline | trim }}</h1>
+      <p>{{ site.about }}</p>
+      <a class="btn" href="#contact">Get a free quote</a>
+    </section>
+
+    <section id="services" class="wrap">
+      <h2>Services</h2>
+      <ul class="cards">
+        {% for s in site.services %}
+        <li class="card">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.detail }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section id="about" class="wrap about">
+      <h2>About</h2>
+      <p>{{ site.about }}</p>
+      <dl class="facts">
+        <div><dt>Phone</dt><dd><a href="tel:{{ site.phone | replace(' ', '') }}">{{ site.phone }}</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd></div>
+        <div><dt>Hours</dt><dd>{{ site.hours }}</dd></div>
+        <div><dt>Location</dt><dd>{{ site.address }}</dd></div>
+      </dl>
+    </section>
+
+    <section id="contact" class="wrap">
+      <h2>Send a message</h2>
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" maxlength="80" required autocomplete="name">
+          <p class="err" data-err="name"></p>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" maxlength="160" required autocomplete="email">
+          <p class="err" data-err="email"></p>
+        </div>
+        <div class="field">
+          <label for="f-message">How can we help?</label>
+          <textarea id="f-message" name="message" rows="5" maxlength="4000" required></textarea>
+          <p class="err" data-err="message"></p>
+        </div>
+        <button class="btn" type="submit">Send</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>&copy; <span id="year"></span> {{ site.business_name }}. All rights reserved.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</body>
+</html>

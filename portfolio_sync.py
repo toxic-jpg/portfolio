@@ -16,6 +16,7 @@ KNOWN_SLUGS = {
     "freelance-automation",
     "java-app-template",
     "vbnet-winforms",
+    "forhire-1xcb5t2",
 }
 
 def detect_tags(folder):
