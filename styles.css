@@ -242,6 +242,9 @@ a:hover { color: var(--accent-hover); }
   font-family: var(--font-mono);
   color: var(--accent);
   letter-spacing: .02em;
+  background: var(--accent-sub);
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 .card-link {
   display: inline-flex;
