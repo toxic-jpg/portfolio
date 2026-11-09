@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heart Lawrence Candelario — Software Developer & BSIT Student</title>
+  <title>Heart Lawrence Candelario - Software Developer & BSIT Student</title>
   <meta name="description" content="Portfolio of Heart, a BSIT student and software developer building real applications in Java, Python, Web, and automation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,6 +25,17 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var links = document.querySelectorAll('.nav-links a');
+        links.forEach(function(link) {
+          link.addEventListener('click', function() {
+            links.forEach(function(l) { l.classList.remove('active'); });
+            this.classList.add('active');
+          });
+        });
+      });
+    </script>
     <a href="https://github.com/toxic-jpg" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">GitHub</a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
@@ -37,11 +48,11 @@
 <!-- Hero -->
 <section class="hero">
   <div class="container hero-inner">
-    <p class="eyebrow">Heart Lawrence Candelario &middot; Software Developer &middot; BSIT Student</p>
+    
     <h1>Building useful software,<br>one project at a time.</h1>
     <p class="lede">
       I build real, functional applications in Java, JavaFX, Python, SQL, and the web stack.
-      School projects, freelance gigs, automation tools, and more &mdash; I ship working code,
+      School projects, freelance gigs, automation tools, and more - I ship working code,
       not just snippets.
     </p>
     <div class="cta-row">
@@ -62,7 +73,7 @@
     <div class="about-grid">
       <div class="about-text">
         <p>
-          Second-year BSIT student based in the Philippines. I learn by building &mdash; so my portfolio
+          Second-year BSIT student based in the Philippines. I learn by building - so my portfolio
           is a collection of working applications, not just code samples. I'm comfortable end-to-end:
           database schema, backend logic, UI, and deployment.
         </p>
@@ -96,10 +107,11 @@
       <article class="card">
         <div class="card-header">
           <h3>ScholarOS</h3>
-          <span class="badge badge-featured">Featured</span>
+          <span class="card-ribbon">Featured</span>
         </div>
+        <div class="card-stats"></div>
         <p>Modular academic dashboard with GPA tracking, risk prediction, and auto-generated study schedules. FastAPI REST API + Tkinter desktop GUI. Built with an AI critic &rarr; reviewer &rarr; security judge pipeline. 1,180 LOC, 33 tests passing.</p>
-        <div class="tags">Python &middot; FastAPI &middot; SQLite &middot; Tkinter &middot; pytest</div>
+        <div class="card-ribbons"><span class="card-ribbon">Py</span><span class="card-ribbon">h</span><span class="card-ribbon">n</span><span class="card-ribbon">; Fas</span><span class="card-ribbon">API</span><span class="card-ribbon">; SQL</span><span class="card-ribbon">e</span><span class="card-ribbon">; Tk</span><span class="card-ribbon">n</span><span class="card-ribbon">er</span><span class="card-ribbon">; py</span><span class="card-ribbon">es</span></div>
         <a class="card-link" href="scholaros/" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
           View Project
@@ -109,10 +121,11 @@
       <article class="card">
         <div class="card-header">
           <h3>BuddySplit</h3>
-          <span class="badge badge-featured">Featured</span>
+          <span class="card-ribbon">Featured</span>
         </div>
+        <div class="card-stats"></div>
         <p>Web-based group expense tracker with authentication, settlement minimization, CSV export, and real-time updates via Socket.io. PostgreSQL backend, Vite + React frontend.</p>
-        <div class="tags">React &middot; Node &middot; Express &middot; PostgreSQL &middot; Socket.io</div>
+        <div class="card-ribbons"><span class="card-ribbon">Reac</span><span class="card-ribbon">; N</span><span class="card-ribbon">e</span><span class="card-ribbon">; Express</span><span class="card-ribbon">; P</span><span class="card-ribbon">s</span><span class="card-ribbon">greSQL</span><span class="card-ribbon">; S</span><span class="card-ribbon">cke</span><span class="card-ribbon">.</span></div>
         <a class="card-link" href="BuddySplit/" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
           View Project
@@ -123,8 +136,9 @@
         <div class="card-header">
           <h3>PennyPinch</h3>
         </div>
-        <p>CLI personal finance tracker &mdash; log income and expenses, categorize spending, and generate monthly reports. Zero dependencies, pure stdlib Python with JSON persistence.</p>
-        <div class="tags">Python &middot; CLI &middot; argparse &middot; JSON</div>
+        <div class="card-stats"></div>
+        <p>CLI personal finance tracker - log income and expenses, categorize spending, and generate monthly reports. Zero dependencies, pure stdlib Python with JSON persistence.</p>
+        <div class="card-ribbons"><span class="card-ribbon">Py</span><span class="card-ribbon">h</span><span class="card-ribbon">n</span><span class="card-ribbon">; CLI</span><span class="card-ribbon">; argparse</span><span class="card-ribbon">; JSON</span></div>
         <a class="card-link" href="pennypinch/" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
           View Project
@@ -135,8 +149,9 @@
         <div class="card-header">
           <h3>CSV Data Cleaner</h3>
         </div>
-        <p>Python tool that scrubs, validates, and transforms messy CSV/Excel files &mdash; missing values, inconsistent types, deduplication, date/number parsing, and email reports.</p>
-        <div class="tags">Python &middot; pandas &middot; openpyxl &middot; smtplib</div>
+        <div class="card-stats"></div>
+        <p>Python tool that scrubs, validates, and transforms messy CSV/Excel files - missing values, inconsistent types, deduplication, date/number parsing, and email reports.</p>
+        <div class="card-ribbons"><span class="card-ribbon">Py</span><span class="card-ribbon">h</span><span class="card-ribbon">n</span><span class="card-ribbon">; pan</span><span class="card-ribbon">as</span><span class="card-ribbon">;</span><span class="card-ribbon">penpyxl</span><span class="card-ribbon">; s</span><span class="card-ribbon">pl</span><span class="card-ribbon">b</span></div>
         <a class="card-link" href="python-csv-cleaner_20261024_1555/" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
           View Demo
@@ -147,8 +162,9 @@
         <div class="card-header">
           <h3>CF7 &rarr; Google Sheets</h3>
         </div>
-        <p>WordPress plugin that syncs Contact Form 7 submissions into Google Sheets via Apps Script &mdash; zero WP plugin dependencies, field mapping UI, handles checkboxes/uploads.</p>
-        <div class="tags">PHP &middot; WordPress &middot; Google API &middot; JavaScript</div>
+        <div class="card-stats"></div>
+        <p>WordPress plugin that syncs Contact Form 7 submissions into Google Sheets via Apps Script - zero WP plugin dependencies, field mapping UI, handles checkboxes/uploads.</p>
+        <div class="card-ribbons"><span class="card-ribbon">PHP</span><span class="card-ribbon">; W</span><span class="card-ribbon">r</span><span class="card-ribbon">Press</span><span class="card-ribbon">; G</span><span class="card-ribbon">gle API</span><span class="card-ribbon">; JavaScr</span><span class="card-ribbon">p</span></div>
         <a class="card-link" href="wp-contact-form-7-google-sheets_20261024_1555/" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
           View Project
@@ -159,8 +175,9 @@
         <div class="card-header">
           <h3>Shopify Section Builder</h3>
         </div>
-        <p>Drag-and-drop Shopify theme section builder with live preview and JSON schema &mdash; demonstrates Liquid, HTML, CSS, and JS integration on Netlify.</p>
-        <div class="tags">HTML &middot; CSS &middot; JavaScript &middot; Shopify &middot; Liquid</div>
+        <div class="card-stats"></div>
+        <p>Drag-and-drop Shopify theme section builder with live preview and JSON schema - demonstrates Liquid, HTML, CSS, and JS integration on Netlify.</p>
+        <div class="card-ribbons"><span class="card-ribbon">HTML</span><span class="card-ribbon">; CSS</span><span class="card-ribbon">; JavaScr</span><span class="card-ribbon">p</span><span class="card-ribbon">; Sh</span><span class="card-ribbon">p</span><span class="card-ribbon">fy</span><span class="card-ribbon">; L</span><span class="card-ribbon">qu</span></div>
         <a class="card-link" href="test_shopify_demo/" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
           View Demo
@@ -171,8 +188,9 @@
         <div class="card-header">
           <h3>Freelance Business Site</h3>
         </div>
-        <p>Flask + SQLite contact-form site delivered for a client &mdash; validated API endpoint, JSONL lead mirror, health check, and editable site config.</p>
-        <div class="tags">Python &middot; Flask &middot; SQLite &middot; REST</div>
+        <div class="card-stats"></div>
+        <p>Flask + SQLite contact-form site delivered for a client - validated API endpoint, JSONL lead mirror, health check, and editable site config.</p>
+        <div class="card-ribbons"><span class="card-ribbon">Py</span><span class="card-ribbon">h</span><span class="card-ribbon">n</span><span class="card-ribbon">; Flask</span><span class="card-ribbon">; SQL</span><span class="card-ribbon">e</span><span class="card-ribbon">; REST</span></div>
         <a class="card-link" href="https://github.com/toxic-jpg" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
           View on GitHub
@@ -183,15 +201,27 @@
         <div class="card-header">
           <h3>ForHire Business Website</h3>
         </div>
-        <p>Flask + SQLite business website with contact form, JSONL lead mirror, and editable site config — delivered for a r/forhire freelance job ($50 fixed price).</p>
-        <div class="tags">Python &middot; Flask &middot; SQLite &middot; REST &middot; Freelance</div>
+        <div class="card-stats"></div>
+        <p>Flask + SQLite business website with contact form, JSONL lead mirror, and editable site config - delivered for a r/forhire freelance job ($50 fixed price).</p>
+        <div class="card-ribbons"><span class="card-ribbon">Py</span><span class="card-ribbon">h</span><span class="card-ribbon">n</span><span class="card-ribbon">; Flask</span><span class="card-ribbon">; SQL</span><span class="card-ribbon">e</span><span class="card-ribbon">; REST</span><span class="card-ribbon">; Freelance</span></div>
         <a class="card-link" href="forhire-1xcb5t2/" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
           View Project
         </a>
       </article>
 
-    </div>
+    
+      <article class="card">
+        <div class="card-header"><h3>JS Bug Fix Demo</h3></div>
+        <div class="card-stats"></div>
+        <p>1. Go to app.netlify.com/drop 2. Drag this entire folder (js-bug-fix-demo folder) onto the page 3. Done - live URL in 30 seconds</p>
+        <div class="card-ribbons"><span class="card-ribbon">CSS</span><span class="card-ribbon">HTML</span><span class="card-ribbon">JavaScript</span><span class="card-ribbon">Shopify</span><span class="card-ribbon">VB.NET</span></div>
+        <a class="card-link" href="js-bug-fix-demo/" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          View →
+        </a>
+      </article>
+</div>
   </div>
 </section>
 
@@ -248,7 +278,7 @@
     <h2 class="section-title">Get in Touch</h2>
     <p class="section-sub">
       Open to software development roles, freelance projects, and internships.
-      I take on small fixed-price projects ($20&ndash;$300) &mdash; bug fixes, data tools, web features, and automation. Available for remote work.
+      I take on small fixed-price projects ($20&ndash;$300) - bug fixes, data tools, web features, and automation. Available for remote work.
     </p>
     <div class="contact-row">
       <a class="btn btn-primary" href="mailto:heartlawrencecandelario@gmail.com">Email Me</a>

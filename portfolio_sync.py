@@ -135,12 +135,29 @@ def update_index_html(new_cards):
         if grid_start == -1:
             print(f"[sync] ERROR: card-grid not found in index.html")
             return
-        # Find the closing div of the card grid
-        grid_end = html.find('</div>', grid_start)
-        if grid_end == -1:
-            print(f"[sync] ERROR: cannot find end of card-grid")
+        # Find the card-grid closing </div> by counting nesting depth.
+        section_end = html.find('</section>', grid_start)
+        if section_end == -1:
+            print("[sync] ERROR: cannot find closing </section>")
             return
-        # Insert before the closing </div>
+        depth = 1
+        pos = html.find(">", grid_start) + 1
+        while pos < section_end and depth > 0:
+            nxt_open = html.find("<div", pos)
+            nxt_close = html.find("</div>", pos)
+            if nxt_close == -1 or nxt_close >= section_end:
+                break
+            if nxt_open != -1 and nxt_open < nxt_close:
+                depth += 1
+                pos = nxt_open + 4
+            else:
+                depth -= 1
+                if depth == 0:
+                    grid_end = nxt_close
+                pos = nxt_close + 6
+        if depth != 0:
+            print("[sync] ERROR: could not find card-grid closing div")
+            return
         html = html[:grid_end] + "\n" + card_block + html[grid_end:]
 
     INDEX_HTML.write_text(html, encoding="utf-8")
